@@ -1,0 +1,68 @@
+//6.1.6
+
+/*INSERT IN MAIN METHOD*/tring[] city={"Las Vegas","Minsk","Sao Paulo"};int[] temps={104,73,80};double[] per={4.17,26.7,55.0};for(int i=0;i<3;i++){System.out.println(city[i]+" has an average annual precipitation of "+per[i]+" inches.");System.out.println(city[i]+" has an average annual high temp of "+temps[i]+" degrees Fahrenheit.");}
+
+//6.1.7
+
+/*INSERT IN MAIN METHOD*/int[] scores={80,95,82,67,100};for(int i=0;i<scores.length;i++){System.out.println(scores[i]);}scores[4]-=5;scores[2]-=10;System.out.println();for(int i=0;i<scores.length;i++){System.out.println(scores[i]);}
+
+//6.1.8
+
+public class LastElement{public static void main(String[] args){String[] arr=new String[]{"hello","my name","world","Karel"};System.out.println(getLastElement(arr));}public static String getLastElement(String[] arr){return "The last element of the String array is: "+arr[arr.length-1];}}
+
+//6.1.6
+
+/*INSERT IN MAIN METHOD*/String[] shot={"Welcome","to","the snap shot","app!"};for(String x:shot){System.out.println(x);}System.out.println();shot[0]="Upgrade";shot[3]="premium "+shot[3];for(String s:shot){System.out.println(s);}
+
+//6.2.7
+
+/*INSERT IN PRINTARR METHOD*/for(String s:arr){System.out.println(s);}
+
+//6.2.8
+
+/*INSERT IN PRINTODDINDICES METHOD*/for(int i=0;i<arr.length;i++){if(i%2!=0){System.out.println(arr[i]);}}
+
+//6.2.9
+
+/*INSERT IN FINDSTRING METHOD*/for(int i=0;i<arr.length;i++){if(arr[i].equals(myString)){return i;}}return -1;
+
+//6.2.10
+
+import java.util.Arrays;public class Fibonacci{public static void main(String[] args){int[] sequence=new int[15];sequence[0]=0;sequence[1]=1;for(int i=2;i<sequence.length;i++){sequence[i]=sequence[i-1]+sequence[i-2];}System.out.println("Fibonacci sequence up to 15 terms:");for(int x:sequence){System.out.print(x+" ");}System.out.println("\nIndex position of 55 is: "+findIndex(sequence, 55));}public static int findIndex(int[] arr,int n){return Arrays.binarySearch(arr,n);}}
+
+//6.3.6
+
+/*REPLACE MAIN METHOD WITH*/public static void main(String[] args){int[] values={17,34,56,2,19,100};for(int x:values){if(x%2==1){System.out.println(x+" is odd");}}}
+
+//6.3.7
+
+/*REPLACE FINDMAX METHOD WITH*/public static int findMax(int[] numbers){int max=Integer.MIN_VALUE;for(int i=0;i<numbers.length;i++){if(numbers[i]>max){max=numbers[i];}}return max;}
+
+//6.3.8
+
+/*INSERT IN MAIN METHOD*/for(Student s:classroom){System.out.println(s.getFirstName()+" "+s.getLastName()+" is in grade "+s.getGradeLevel());}
+/*INSERT IN GETLASTNAME METHOD*/return lastName;
+/*INSERT IN GETGRADELEVEL METHOD*/return gradeLevel;
+
+//6.3.9
+
+/*INSERT IN MAIN METHOD*/ArrayAverage x=new ArrayAverage(numArray);System.out.println("The average of the array is "+x.getAverage());
+/*INSERT IN ARRAYAVERAGE METHOD*/public double getAverage(){int x=0;for(int v:values){x+=v;}return (double)x/(double)values.length;}
+
+//6.4.6
+
+//INSERT IN MEDIAN METHOD*/Arrays.sort(arr);if(arr.length%2==1){return arr[arr.length/2];}else{return (double)(arr[arr.length/2]+arr[arr.length/2-1])/2;}
+
+//6.4.7
+
+/*INSERT IN FINDMULTIPLEOFTHREE METHOD*/for(int i=arr.length-1;i>=0;i--){if(arr[i]%3==0){return i;}}return -1;
+
+//6.4.8
+
+/*INSERT IN GETMOSTIMPROVEDSTUDENT METHOD*/int x=Integer.MIN_VALUE,index=0;for(int i=0;i<numStudentsAdded;i++){if(students[i].getExamRange()>x){x=students[i].getExamRange();index=i;}}return students[index];
+/*INSERT IN GETEXAMRANGE METHOD*/int min=Integer.MAX_VALUE;int max=Integer.MIN_VALUE;for(int x:exams){if(x>max){max=x;}if(x<min){min=x;}}return max-min;
+
+//6.4.9
+
+/*REPLACE FINDCARSPACE WITH*/public int findCarSpace(String name){for(int i=0;i<spaces.length;i++){if(spaces[i]!=null&&spaces[i].getName().equals(name)){return i;}}return -1;}
+/*REPLACE CONSOLIDATE WITH*/public void consolidate(){for(int i=0;i<spaces.length;i++){if(spaces[i]==null){for(int j=i+1;j<spaces.length;j++){if(spaces[j]!=null){spaces[i]=spaces[j];spaces[j]=null;}}}}}
