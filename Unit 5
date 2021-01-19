@@ -57,3 +57,26 @@ public class Employee{private String name;private int id;private double salary;p
 
 public class Fraction{private int num,den;public Fraction(int n,int d){num=n;den=d;}public int getNumerator(){return num;}public int getDenominator(){return den;}public void setNumerator(int x){num=x;}public void setDenominator(int x){den=x;}public void add(Fraction other){num=num*other.getDenominator()+other.getNumerator()*den;den*=other.getDenominator();}public void subtract(Fraction other){num=num*other.getDenominator()-other.getNumerator()*den;den*=other.getDenominator();}public void multiply(Fraction other){num*=other.getNumerator();den*=other.getDenominator();}public String toString(){return num+" / "+den;}}
 
+//5.5.7
+
+public class Routine{private double sleep,fun,school,sports;public Routine(){sleep=fun=school=sports=0.0;}public void setSleep(double hoursSleep){sleep=hoursSleep*7;}public void setFun(double hoursFun){fun=hoursFun*7;}public void setSchool(double hoursSchool){school=7*hoursSchool;}public void setSports(double hoursSports){sports=7*hoursSports;}public void printTotal(){System.out.println("Weekly Totals\nSleep: "+sleep+"\nSchool: "+school+"\nSports: "+sports+"\nFun: "+fun+"\nGrand Total: "+(school+sports+fun+sleep)+"\nHours left over: "+(168.0-(school+fun+sleep+sports)));}}
+
+//5.6.5
+
+/*DISTANCE CLASS*/public class Distance{private double miles;public Distance(double startMiles){miles=startMiles;}public double toKilometers(){return miles/.62137;}public double toYards(){return miles*1760;}public double toFeet(){return miles*5280;}public double getMiles(){return miles;}}
+/*INSERT INTO MAIN METHOD*/System.out.println(new Distance(5).toYards()+"\n"+new Distance(10).toKilometers()+"\n"+new Distance(12).toFeet());
+
+//5.6.6
+
+/*FOOD CLASS*/public class Food{private String name;private int calories;public Food(String n,int c){name=n;calories=c;}public String getName(){return name;}public int getCalories(){return calories;}public void setName(String n){name=n;}public void setCalories(int c){calories=c;}public String toString(){return name+" have "+calories+" calories";}}
+/*INSERT INTO MAIN METHOD*/Scanner s=new Scanner(System.in);Food h=new Food("Hamburgers",600);System.out.println(h+"\nHow many would you like?");int hm=s.nextInt();Food f=new Food("French fries",350);System.out.println(f+"\nHow many would you like?");int fm=s.nextInt();Food c=new Food("Coke",200);System.out.println(c+"\nHow many would you like?");int cm=s.nextInt();System.out.println("Your meal will have a total of "+(hm*h.getCalories()+fm*f.getCalories()+cm*c.getCalories())+" calories");
+
+//5.6.7
+
+/*CAR CLASS*/public class Car{private double efficiency,gas,tankCapacity,totalMilesDriven;public Car(double carEfficiency,double carTankCapacity){efficiency=carEfficiency;tankCapacity=carTankCapacity;}public void addGas(){gas=tankCapacity;System.out.println("Filling up ...");}public void addGas(double g){gas+=g;if(gas>tankCapacity){gas=tankCapacity;}System.out.println("Adding gas ...");}public double getTotalMilesDriven(){return totalMilesDriven;}public double getGas(){return gas;}public boolean canDrive(double distance){return milesAvailable()>=distance;}public double milesAvailable(){return efficiency*gas;}public void drive(double distance){if(canDrive(distance)){totalMilesDriven+=distance;System.out.println("Driving "+distance);gas-=distance/efficiency;}else{System.out.println("Can't drive "+distance+". That's too far!");}}}
+/*INSERT INTO MAIN METHOD*/Car x=new Car(20,15);x.addGas();System.out.println("Miles available: "+x.milesAvailable());x.drive(100);System.out.println("Miles available: "+x.milesAvailable());x.addGas(2);System.out.println("Miles available: "+x.milesAvailable());x.drive(1000);x.drive(200);System.out.println("Gas remaining: "+x.getGas()+"\nTotal Miles Driven: "+x.getTotalMilesDriven());
+
+//5.7.5
+
+/*RANDOMIZER CLASS*/public class Randomizer{public static int nextInt(){return (int)(Math.random()*10+1);}public static int nextInt(int min,int max){return (int)(Math.random()*(max-min+1)+min);}}
+
