@@ -16,3 +16,44 @@ public class Employee{private String name;private int id;private double salary;p
 /*BASEBALLPLAYER CLASS*/public BaseballPlayer(String nam,int hit,int bat){name=nam;hits=hit;atBats=bat;}
 /*MAIN CLASS*/babeRuth.printBattingAverage();
 
+//5.2.6
+
+/*PUT INSIDE DOG CLASS*/public Dog(String n,int a,double w){name=n;age=a;weight=w;}public Dog(String n,int a){name=n;age=a;weight=0.0;}
+/*PUT INSIDE MAIN METHOD*/System.out.println(new Dog("Karel",7,15.6)+"\n"+new Dog("Clover",9));
+
+//5.2.7
+
+/*PUT IN STUDENT CLASS*/public Student(String f,String l,int g,String s){firstName=f;lastName=l;gradeLevel=g;school=s;}public Student(String f,String l,int g){firstName=f;lastName=l;gradeLevel=g;if(5<g&&g<9){school="middle school";}else if(8<g&&g<13){school="high school";}else{school="elementary school";}}public String toString(){return firstName+" "+lastName+" is in grade "+gradeLevel+" and goes to "+school;}
+
+//5.2.8
+
+/*INSERT INTO SCHOOLCLUB CLASS*/public SchoolClub(Student s,String n){leader=s;name=n;numMembers=0;}
+/*INSERT INTO MAIN METHOD*/System.out.println(new SchoolClub(alan,"well"));
+/*INSERT INTO STUDENT CLASS*/public Student(String f,String l,int g,String s){firstName=f;lastName=l;gradeLevel=g;school=s;}public Student(String f,String l,int g){firstName=f;lastName=l;gradeLevel=g;if(5<g&&g<9){school="middle school";}else if(8<g&&g<13){school="high school";}else{school="elementary school";}}public String toString(){return firstName+" "+lastName+" is in grade "+gradeLevel+" and goes to "+school;}
+
+/*5.4.5
+
+/*INSERT INTO TEXTMESSAGE CLASS*/public String getMessage(){return message;}public String getSender(){return sender;}public String getReceiver(){return receiver;}
+
+//5.4.6
+
+/*INSERT INTO DRAGON CLASS*/public Dragon(int l,String a){attack=a;level=l;}public String getAttack(){return attack;}public int getLevel(){return level;};public String fight(){String s="";for(int i=0;i<level;i++){s+=attack;}return s;}
+
+//5.4.7
+
+/*INSERT INTO DRAGON CLASS*/public Dragon(String n,int l){name=n;level=l;if(l>69){canBreatheFire=true;}}public String getName(){return name;}public int getLevel(){return level;}public boolean isFireBreather(){return canBreatheFire;}public void attack(){if(canBreatheFire){System.out.println(">>>>>>>>>>\n>>>>>>>>>>>>>>\n>>>>>>>>>>>>>>\n>>>>>>>>>>");}else{System.out.println("~ ~ ~");}}public void gainExperience(){level+=10;if(level>69){canBreatheFire=true;}}
+
+//5.4.8
+
+/*MEAL CLASS*/public class Meal{private String name,recipe;private int calories;public Meal(String n,int c,String r){name=n;recipe=r;calories=c;}public String getName(){return name;}public String getRecipe(){return recipe;}public int getCalories(){return calories;}public String toString(){return name+", which has "+calories+" calories.";}}
+/*CHEF CLASS*/public class Chef{private String name,resturant;private Meal best;public Chef(String n,String r,Meal b){name=n;resturant=r;best=b;}public String getName(){return name;}public String getRestaurant(){return resturant;}public int getMealCalories(){return best.getCalories();}public String getMealRecipe(){return best.getRecipe();}public String getMealName(){return best.getName();}public String toString(){return "Chef "+name+" works at "+resturant+" and is best known for "+best;}}
+/*INSERT INTO MAIN METHOD*/System.out.println(new Chef("Karel","Chuck E Cheese",new Meal("Toast",100,"Put in toaster for 3 mins")));
+
+//5.5.5
+
+/*INSERT INTO RECTANGLE CLASS*/public int getWidth(){return width;}public void setWidth(int w){width=w;}public int getHeight(){return height;}public void setHeight(int h){height=h;}public int getArea(){return height*width;}public int getPerimeter(){return 2*(height+width);}public String toString(){return "Rectangle width: "+width+", Rectangle height: "+height;}
+
+//5.5.6
+
+public class Fraction{private int num,den;public Fraction(int n,int d){num=n;den=d;}public int getNumerator(){return num;}public int getDenominator(){return den;}public void setNumerator(int x){num=x;}public void setDenominator(int x){den=x;}public void add(Fraction other){num=num*other.getDenominator()+other.getNumerator()*den;den*=other.getDenominator();}public void subtract(Fraction other){num=num*other.getDenominator()-other.getNumerator()*den;den*=other.getDenominator();}public void multiply(Fraction other){num*=other.getNumerator();den*=other.getDenominator();}public String toString(){return num+" / "+den;}}
+
