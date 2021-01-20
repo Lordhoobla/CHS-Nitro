@@ -45,3 +45,31 @@
 
 /*TICKETORGANIZER CLASS*/import java.util.ArrayList;public class TicketOrganizer{private ArrayList<AirlineTicket> tickets;public TicketOrganizer(ArrayList<AirlineTicket> t){tickets=t;}public ArrayList<AirlineTicket> getTickets(){return tickets;}public void printPassengersByBoardingGroup(){for(int i=1;i<=5;i++){System.out.println("Boarding Group "+i+":");for(int j=0;j<tickets.size();j++){if(tickets.get(j).getBoardingGroup()==i){System.out.println("Passenger "+(j+1));}}}}public void canBoardTogether(){String print="";for(int i=0;i<tickets.size()-1;i++){if(tickets.get(i).getRow()==tickets.get(i+1).getRow()&&tickets.get(i).getBoardingGroup()==tickets.get(i+1).getBoardingGroup()){print+="Passenger "+(i+1)+" can board with Passenger "+(i+2)+".";}}if(print.isEmpty()){System.out.println("There are no passengers with the same row and boarding group.");}else{System.out.println(print);}}}
 
+//7.4.7
+
+/*INSERT INTO BILLBOARD CLASS*/public void add(Musician m){if(!m.getIsPlatinum()){System.out.println("Sorry, "+m+" does not qualify for Top 10");}else if(top10.size()<10){top10.add(m);}else{replace(m);}}public void replace(Musician m){int index=0,weeks=Integer.MAX_VALUE;for(int i=0;i<top10.size();i++){if(top10.get(i).getWeeksInTop40()<weeks){index=i;weeks=top10.get(i).getWeeksInTop40();}}if(weeks<m.getWeeksInTop40()){System.out.println("The musician "+top10.get(index)+" has been replaced by "+m+".");top10.set(index,m);}else{System.out.println("Sorry, "+m+" has less weeks in the Top 40 than the other musicians.");}}
+
+//7.4.8
+
+/*INSERT INTO DATAPURGE CLASS*/public static boolean containsOnlyEmails(ArrayList<String> emails){for(String x:emails){if(!(x.contains("@")&&x.contains("."))){return false;}}return true;}public static void removeAOL(ArrayList<String> emails){for(int i=emails.size()-1;i>=0;i--){if(emails.get(i).contains("aol.com")){System.out.println(emails.get(i)+" is being removed for having an aol email");emails.remove(i);}}}public static void removeDuplicates(ArrayList<String> emails){for(int i=0;i<emails.size();i++){for(int j=i+1;j<emails.size();j++){if(emails.get(i).equals(emails.get(j))){System.out.println("Duplicate of "+emails.get(i)+" has been removed.");emails.remove(j);}}}}
+
+//7.5.4
+
+/*INSERT INTO SEARCH METHOD*/return array.indexOf(key);
+
+//7.5.5
+
+/*INSERT INTO MAIN METHOD*/Scanner scan=new Scanner(System.in);String[] players=new String[5];int i=0;do{System.out.println("Enter Player you would like on your team: ");String name=scan.nextLine();if(availablePlayers.contains(name)){players[i]=name;availablePlayers.remove(name);System.out.println("Great! That player is added to your team!");i++;}else{System.out.println("That player is not available, please pick another player.");}System.out.println();}while(i<5);System.out.println("Your team is:");for(int j=0;j<5;j++){System.out.println(players[j]);}
+/*INSERT INTO SEARCH METHOD*/return array.indexOf(player);
+
+//7.6.4
+
+/*REPLACE SELECTIONSORT METHOD WITH*/public static int[] selectionSort(int[] arr){int currentMinIndex,numOf=0;for(int i=0;i<arr.length-1;i++){currentMinIndex=i;for(int j=i+1;j<arr.length;j++){if(arr[j]<arr[currentMinIndex]){currentMinIndex=j;}}if(i!=currentMinIndex){numOf++;int temp=arr[currentMinIndex];arr[currentMinIndex]=arr[i];arr[i]=temp;}}System.out.println(numOf);return arr;}
+
+//7.6.9
+
+/*INSERT IN INSORTION SORT METHOD*/Arrays.sort(arr);for(int i=0;i<arr.length/2;i++){int x=arr[i];arr[i]=arr[arr.length-1-i];arr[arr.length-1-i]=x;}
+
+//7.6.12
+
+/*PHONEBOOK CLASS*/import java.util.*;public class Phonebook{private ArrayList<PhoneNumber> book=new ArrayList<PhoneNumber>();public void sort(){Collections.sort(book,new Comparator<PhoneNumber>(){public int compare(PhoneNumber p1,PhoneNumber p2){return p1.getName().compareTo(p2.getName());}});}public void addNumber(PhoneNumber p){book.add(p);sort();}public void printPhoneBook(){book.forEach(n->System.out.println(n.getName()));}}
