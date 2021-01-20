@@ -1,0 +1,42 @@
+//7.1.6
+
+/*INSERT IN MAIN METHOD*/ArrayList<String> companyName=new ArrayList<String>();ArrayList<Integer> contractValue=new ArrayList<Integer>();
+
+//7.1.7
+
+/*INSERT IN MAIN METHOD*/ArrayList<Car> inventory=new ArrayList<Car>();
+
+//7.2.6
+
+/*INSERT IN MAIN METHOD*/for(int i=1;i<=5;i++){numbers.add(i);}System.out.println(numbers.get(0));
+
+//7.2.7
+
+/*INSERT IN MAIN METHOD*/ArrayList<Integer> evens=new ArrayList<Integer>();for(int i=2;i<=100;i+=2){evens.add(i);}
+
+//7.2.8
+
+/*INSERT IN STUDENT CLASS*/private static ArrayList<Student> classList=new ArrayList<Student>();
+
+//7.2.9
+
+/*INSERT INTO STUDENT CLASS*/public static String getLastStudent(){return classList.get(classList.size()-1).getName();}public static int getClassSize(){return classList.size();}public static void addStudent(int index,Student s){classList.add(index,s);classList.remove(classList.size()-1);}public static String getStudent(int index){if(index>=classList.size()||index<0){return "";}return classList.get(index).getName();}
+
+//7.3.6
+
+/*INSERT INTO REMOVEEVENS METHOD*/array.removeIf(n->n%2==0);array.forEach(n->System.out.println(n));
+
+//7.3.7
+
+/*INSERT INTO ARRAYLISTMETHODS CLASS*/public static void print(ArrayList<String> arr){arr.forEach(n->System.out.println(n));}public static void condense(ArrayList<String> arr){for(int i=0;i<arr.size()-2;i++){arr.set(i,arr.get(i)+arr.get(i+1));arr.remove(i+1);}}public static void duplicate(ArrayList<String> arr){for(int i=arr.size()-1;i>=0;i--){arr.add(i+1,arr.get(i));}}
+
+//7.3.8
+
+/*INSERT INTO ROADTRIP CLASS*/ArrayList<GeoLocation> trip=new ArrayList<GeoLocation>();public void addStop(String name,double latitude,double longitude){trip.add(new GeoLocation(name,latitude,longitude));}public int getNumberOfStops(){return trip.size();}public double getTripLength(){double amount=0;for(int i=0;i<trip.size()-1;i++){amount+=trip.get(i).distanceFrom(trip.get(i+1));}return amount;}public String toString(){String x="";for(int i=0;i<trip.size();i++){x+=(i+1)+". "+trip.get(i)+"\n";}return x;}
+/*INSERT INTO GEOLOCATION CLASS*/private String name;public String getName(){return name;}
+/*INSERT INTO GEOLOCATION CONSTRUCTOR*/this.name=name;
+/*REPLACE TOSTRING WITH*/ public String toString() {return name+" ("+latitude+", "+longitude+")";}
+
+//7.4.5
+
+/*INSERT INTO EQUALS METHOD*/if(array1.size()!=array2.size()){return false;}for(int i=0;i<array1.size();i++){if(array1.get(i)!=array2.get(i)){return false;}}return true;
