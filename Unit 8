@@ -1,0 +1,21 @@
+//8.1.5
+
+/*INSERT INTO FIXARRAY METHOD*/arr[row][col]=value;
+/*REPLACE MAIN METHOD*/public static void main(String[] args){int[][] array={{5,4,2,1,0},{523,63,2342,586,1,6534,0},{10,9,2,0}};fixArray(array,0,array[0].length-1,array[0].length);fixArray(array,1,array[1].length-1,array[1][0]+array[1][array[1].length-2]);fixArray(array,2,array[2].length-1,array.length);print(array);}
+
+//8.1.6
+
+/*INSERT INTO FIRST LINE OF MAIN METHOD*/String[][] chess={{"Rook","Knight","Bishop","Queen","King","Bishop","Knight","Rook"},{"Pawn","Pawn","Pawn","Pawn","Pawn","Pawn","Pawn","Pawn"},{"-","-","-","-","-","-","-","-"},{"-","-","-","-","-","-","-","-"},{"-","-","-","-","-","-","-","-"},{"-","-","-","-","-","-","-","-"},{"Pawn","Pawn","Pawn","Pawn","Pawn","Pawn","Pawn","Pawn"},{"Rook","Knight","Bishop","Queen","King","Bishop","Knight","Rook"}};
+
+//8.1.7
+
+/*INSERT IN TICTACTOE CLASS*/private String[][] board={{"-","-","-"},{"-","-","-"},{"-","-","-"}};public String[][] getBoard(){return board;}
+
+//8.2.7
+
+/*INSERT IN SUMROW METHOD*/int sum=0;for(int x:array[row]){sum+=x;}return sum;
+/*INSERT AT THE END OF MAIN METHOD*/for(int i=0;i<array.length;i++){System.out.println(sumRow(array,i));}
+
+//8.2.8
+
+/*TICTACTOE CLASS*/public class TicTacToe{private int turn;private String[][] board={{"-","-","-"},{"-","-","-"},{"-","-","-"}};public int getTurn(){return turn;}public void printBoard(){System.out.println("  0 1 2");for(int i=0;i<board.length;i++){System.out.print(i+" ");for(String x:board[i]){System.out.print(x+" ");}System.out.println();}}public boolean pickLocation(int row,int col){return row>=0&&row<3&&col>=0&&col<3&&board[row][col].equals("-");}public void takeTurn(int row,int col){if(pickLocation(row,col)){if(turn%2==0){board[row][col]="X";}else{board[row][col]="O";}turn++;}}public boolean checkRow(){for(String[] x:board){if((x[0].equals("X")&&x[1].equals("X")&&x[2].equals("X"))||(x[0].equals("O")&&x[1].equals("O")&&x[2].equals("O"))){return true;}}return false;}public boolean checkCol(){for(int i=0;i<3;i++){if((board[0][i].equals("X")&&board[1][i].equals("X")&&board[2][i].equals("X"))||(board[0][i].equals("O")&&board[1][i].equals("O")&&board[2][i].equals("O"))){return true;}}return false;}public boolean checkDiag(){return (board[0][0].equals("X")&&board[1][1].equals("X")&&board[2][2].equals("X"))||(board[0][0].equals("O")&&board[1][1].equals("O")&&board[2][2].equals("O"))||(board[0][2].equals("X")&&board[1][1].equals("X")&&board[2][0].equals("X"))||(board[0][2].equals("O")&&board[1][1].equals("O")&&board[2][0].equals("O"));}public boolean checkWin(){return checkRow()||checkCol()||checkDiag();}}
