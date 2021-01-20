@@ -1,0 +1,51 @@
+//1.2.5
+
+/*INSERT INTO MAIN METHOD*/System.out.println("My name is Jeremy.\nI like comedy.");
+
+//1.2.6
+
+/*INSERT INTO MAIN METHOD*/System.out.println("   /)___\n  /     O|___\n /           )\n/       )___/");
+
+//1.2.7
+
+/*REPLACE MAIN METHOD*/public static void main(String[] args){System.out.println("Is a tomato a fruit or a vegetable?");System.out.print("While biologically speaking a tomato");System.out.println(" is a fruit, legally speaking it is a vegetable!");System.out.print("In Supreme Court Case Nix v. Hedden, the Court");System.out.print(" ruled that tomatoes should be classified as a vegetable");System.out.print(" under U.S Customs regulations because they are consumed");System.out.println(" more like a vegetable than a fruit, and should be taxed as such.");System.out.print("When tomatoes are shipped into the U.S, they are now taxed as vegetables");System.out.println(" even though their anatomy suggests otherwise.");}
+
+//1.2.8
+
+/*INSERT INTO MAIN METHOD*/System.out.println("3 Ways to Heat Anything\nEach of the 3 methods below is an example of the three ways that heat can be transferred.\n\nConduction\nConduction is heat transfer through matter. Metals conduct heat well, but air does not. This is a direct contact type of heat transfer.\n\nConvection\nConvection is heat transfer by the movement of mass from one place to another. It can take place only in liquids and gases. Heat gained by conduction or radiation is moved by convection.\n\nRadiation\nRadiation can transfer heat through the relative emptiness of space. All other forms of heat transfer require motion of molecules like air or water to move heat.");
+
+//1.2.9
+
+/*INSERT INTO MAIN METHOD*/System.out.println("Age\t| M/YY - Description\n7\t| 7/07 - First trip to Disney World\n\t|\n\t|\n\t|\n  9\t|\n\t|\n\t|  2/10 - Attended the Olympics in Vancouver\n\t|\n11\t|  7/11 - Attended first overnight camp\n\t|\n\t|\n\t|\n13\t|\n\t|  9/13 - Started job delivering papers\n\t|\n\t|  11/14 - Won wrestling tournament\n15\t|\n\t|  8/15 - Started high school\n\t|\n\t|\n17\t|  ");
+
+//1.3.5
+
+/*INSERT INTO MAIN METHOD*/int year=2021;System.out.println("The current year is "+year);
+
+//1.3.9
+
+/*REPLACE LINES 5-8 WITH*/String myName="Karel the Dog";int luckyNumber=11;double currentTemperature=75.3;boolean isStudent=true;
+
+//1.3.10
+
+/*INSERT IN MAIN METHOD*/String temp=team2;team2=team6;team6=temp;temp=team3;team3=team8;team8=temp;temp=team4;team4=team10;team10=temp;temp=team5;team5=team10;team10=temp;temp=team6;team6=team10;team10=temp;temp=team8;team8=team9;team9=temp;
+
+//1.4.6
+
+/*INSERT IN MAIN METHOD*/System.out.println("The pyramid weighs "+(2500000*2.5)+" tons.");
+
+//1.4.7
+
+/*INSERT IN MAIN METHOD*/int n1=1,d1=2,n2=2,d2=5;System.out.println("The numerator of the first fraction is "+n1+"\nThe denominator of the first fraction is "+d1+"\nThe numerator fo the second fraction is "+n2+"\nThe denominator of the second fraction is "+d2+"\nThe sum of "+n1+'/'+d1+" + "+n2+'/'+d2+" = "+(n1*d2+n2*d1)+'/'+(d2*d1));
+
+//1.4.8
+
+/*INSERT IN MAIN METHOD*/System.out.println("height"+(100*.5*9.8)+"\nvelocity"+(9.8*10));
+
+//1.5.5
+
+/*INSERT IN MAIN METHOD*/int seconds=16;seconds+=(20*60*60)+(42*60);System.out.println("time"+seconds);
+
+//1.5.6
+
+/*INSERT IN MAIN METHOD*/int age=15;System.out.println("My current age: "+(age++)+"\nNext year I'll be "+(age--)+"\nMy current age: "+age);
