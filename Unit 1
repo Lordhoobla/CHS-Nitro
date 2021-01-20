@@ -49,3 +49,31 @@
 //1.5.6
 
 /*INSERT IN MAIN METHOD*/int age=15;System.out.println("My current age: "+(age++)+"\nNext year I'll be "+(age--)+"\nMy current age: "+age);
+
+//1.6.6
+
+/*INSERT IN MAIN METHOD*/System.out.print("Please enter your current age: ");int age=input.nextInt();System.out.println("My current age is: "+age+"\nMy age next year will be: "+(++age)+"\nMy current age is: "+(--age));
+
+//1.6.7
+
+/*INSERT IN MAIN METHOD*/System.out.println("How much did dinner cost?");double x=input.nextDouble();System.out.println("How much is mini-golf for one person?");double y=input.nextDouble()*2;System.out.println("How much did desert cost?");double z=input.nextDouble();System.out.println("Dinner: $"+x+"\nMini-Golf: $"+(y/2)+"\nDessert: $"+z+"\nGrand Total: $"+(x+y+z));
+
+//1.6.8
+
+/*INSERT IN MAIN METHOD*/Scanner scan=new Scanner(System.in);System.out.println("Enter the author's name as 'Last name, First name': ");String x=scan.nextLine();System.out.println("Enter the title of the book: ");String y=scan.nextLine();System.out.println("Enter the publisher of the book: ");String z=scan.nextLine();System.out.println("Enter the year the book was published: ");String xx=scan.nextLine();System.out.println(x+". "+y+".\n"+z+", "+xx+".");
+
+//1.7.4
+
+/*INSERT IN MAIN METHOD*/Scanner s=new Scanner(System.in);System.out.println(".");double x=s.nextDouble();System.out.println((int)x);
+
+//1.7.5
+
+/*INSERT IN MAIN METHOD*/Scanner s=new Scanner(System.in);System.out.print("First Int: ");int x=s.nextInt();System.out.print("Second Int: ");int y=s.nextInt();System.out.println((double)x/(double)y);
+
+//1.7.8
+
+/*INSERT IN MAIN METHOD*/Scanner s=new Scanner(System.in);System.out.println("Enter movie rating (as a decimal)");double x=s.nextDouble();System.out.println("Rating rounded: "+((int)(x+0.5)));
+
+//1.7.11
+
+/*INSERT IN MAIN METHOD*/System.out.println(Integer.MIN_VALUE);System.out.println(Integer.MAX_VALUE);System.out.println(Integer.MIN_VALUE-1);System.out.println(Integer.MAX_VALUE+1);
